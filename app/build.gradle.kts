@@ -4,6 +4,10 @@ plugins {
 
 android {
     namespace = "com.works.app"
+    buildFeatures {
+        buildConfig = true
+    }
+
     compileSdk {
         version = release(37)
     }
@@ -41,4 +45,15 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+
+    // Retrofit
+    implementation(libs.retrofit)
+    // Gson Converter
+    implementation(libs.converter.gson)
+    // OkHttp
+    implementation(libs.okhttp)
+    // OkHttp Logging Interceptor
+    implementation(libs.logging.interceptor)
+    // Kotlin Coroutines
+    implementation(libs.kotlinx.coroutines.android)
 }
