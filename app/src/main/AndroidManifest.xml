@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JandarmaProject">
         <activity
-            android:name=".MainActivity"
+            android:name=".SplahActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -25,6 +25,14 @@
         </activity>
         <activity
             android:name=".pages.Register"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".pages.ProductActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".pages.LoginActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

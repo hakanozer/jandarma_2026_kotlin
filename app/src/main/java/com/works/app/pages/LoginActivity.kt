@@ -1,4 +1,4 @@
-package com.works.app
+package com.works.app.pages
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -11,10 +11,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.works.app.R
 import com.works.app.action.MainKotlin
 import com.works.app.models.LoginReponse
 import com.works.app.models.LoginRequest
-import com.works.app.pages.Register
 import com.works.app.services.Authentication
 import com.works.app.utils.RetrofitClient
 import com.works.app.utils.Validation
@@ -22,7 +22,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     lateinit var txtEmail: EditText
     lateinit var txtPassword: EditText
@@ -91,6 +91,9 @@ class MainActivity : AppCompatActivity() {
                             editor.putString("token", body.data.access_token)
                             editor.apply()
                             RetrofitClient.initialize(applicationContext)
+                            // kullanıcı giriş yaptı - artık product sayfası aç
+                            val intent =  Intent(this@LoginActivity, ProductActivity::class.java)
+                            startActivity(intent)
                         }else {
                             Log.d("Durum", "Giriş Başarısız")
                         }
