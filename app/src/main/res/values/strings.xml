@@ -4,4 +4,19 @@
     <string name="products_subtitle">Koleksiyonu keşfet</string>
     <string name="product_image">Ürün görseli</string>
     <string name="products_load_error">Ürünler yüklenemedi. Lütfen tekrar deneyin.</string>
+
+    <string name="product_detail_title">Ürün Detayı</string>
+    <string name="back">Geri</string>
+    <string name="label_brand">Marka</string>
+    <string name="label_sku">SKU</string>
+    <string name="label_min_order">Min. Sipariş</string>
+    <string name="label_stock">Stok</string>
+    <string name="label_description">Ürün Açıklaması</string>
+    <string name="label_tags">Etiketler</string>
+    <string name="label_total_price">Toplam</string>
+    <string name="add_to_cart">Sepete Ekle</string>
+    <string name="stock_in">Stokta %1$d adet</string>
+    <string name="stock_out">Stokta yok</string>
+    <string name="quantity_unit">%1$d adet</string>
+    <string name="product_detail_load_error">Ürün detayı yüklenemedi.</string>
 </resources>

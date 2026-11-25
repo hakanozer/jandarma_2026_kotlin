@@ -73,6 +73,8 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() 
         private val txtPrice: TextView = itemView.findViewById(R.id.txtPrice)
         private val txtOldPrice: TextView = itemView.findViewById(R.id.txtOldPrice)
         private val txtDiscount: TextView = itemView.findViewById(R.id.txtDiscount)
+        private val txtCategory: TextView = itemView.findViewById(R.id.txtCategory)
+        private val txtRating: TextView = itemView.findViewById(R.id.txtRating)
 
         private val imageAdapter = ProductImageAdapter()
         private val snapHelper = PagerSnapHelper()
@@ -98,6 +100,8 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() 
         fun bind(product: ProductModel) {
             txtTitle.text = product.title
             txtPrice.text = formatPrice(product.price)
+            txtCategory.text = product.category
+            txtRating.text = "★ ${String.format(Locale.US, "%.1f", product.rating)}"
 
             if (product.discountPercentage > 0) {
                 val originalPrice = product.price / (1 - product.discountPercentage / 100.0)

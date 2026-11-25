@@ -125,6 +125,38 @@
                     android:textStyle="bold"
                     tools:text="-%23" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_chip_blue"
+                    android:paddingStart="7dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/brand_blue"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:text="beauty" />
+
+                <TextView
+                    android:id="@+id/txtRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:textColor="@color/brand_orange"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    tools:text="★ 4.9" />
+            </LinearLayout>
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
