@@ -5,6 +5,11 @@ data class ProductReponse (
     val data: List<ProductModel>
 )
 
+data class ProductSingleReponse (
+    val meta: ProductMeta,
+    val data: ProductModel
+)
+
 data class ProductModel (
     val id: Long,
     val title: String,
@@ -25,7 +30,7 @@ data class ProductModel (
 data class ProductMeta (
     val status: Long,
     val message: String,
-    val pagination: Pagination
+    val pagination: Pagination? = null
 )
 
 data class Pagination (

@@ -105,8 +105,10 @@ class ProductActivity : AppCompatActivity() {
                     }
 
                     currentPage = page
-                    isLastPage = body.data.isEmpty() ||
-                        page.toLong() >= body.meta.pagination.total_pages
+                    if (body.meta.pagination != null) {
+                        isLastPage = body.data.isEmpty() ||
+                                page.toLong() >= body.meta.pagination.total_pages
+                    }
                 }
 
                 override fun onFailure(call: Call<ProductReponse>, t: Throwable) {

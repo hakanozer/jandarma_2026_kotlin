@@ -1,6 +1,8 @@
 package com.works.app.adapters
 
+import android.content.Intent
 import android.graphics.Paint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +14,7 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.works.app.R
 import com.works.app.models.ProductModel
+import com.works.app.pages.ProductDetailActivity
 import com.works.app.utils.ImageLoader
 import java.util.Locale
 import kotlin.math.max
@@ -113,6 +116,12 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() 
             imageAdapter.submitImages(product.images)
             rvImages.scrollToPosition(0)
             buildDots(product.images.size)
+
+            itemView.setOnClickListener {
+                val intent = Intent(itemView.context, ProductDetailActivity::class.java)
+                intent.putExtra("id", product.id)
+                itemView.context.startActivity(intent)
+            }
         }
 
         private fun buildDots(count: Int) {
