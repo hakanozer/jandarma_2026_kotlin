@@ -2,4 +2,18 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Marka renkleri -->
+    <color name="brand_blue">#1565C0</color>
+    <color name="brand_blue_light">#EAF2FD</color>
+    <color name="brand_orange">#F97316</color>
+    <color name="brand_orange_light">#FFF3E9</color>
+
+    <!-- Nötr renkler -->
+    <color name="surface_white">#FFFFFFFF</color>
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="border_light">#E6EAF0</color>
+    <color name="image_placeholder">#F1F4F9</color>
+    <color name="dot_inactive">#B8C4D4</color>
 </resources>
