@@ -37,6 +37,9 @@ class LoginActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        // actionbar hide
+        supportActionBar?.hide()
+
         sharedPreferences = getSharedPreferences("app", MODE_PRIVATE)
         editor = sharedPreferences.edit()
 

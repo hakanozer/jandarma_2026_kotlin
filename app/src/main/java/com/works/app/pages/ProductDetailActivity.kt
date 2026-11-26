@@ -71,6 +71,9 @@ class ProductDetailActivity : AppCompatActivity() {
         RetrofitClient.initialize(applicationContext)
         ImageLoader.initialize(applicationContext)
 
+        // actionbar hide
+        supportActionBar?.hide()
+
         bindViews()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

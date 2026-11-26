@@ -1,5 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.ksp) apply false
+    alias(libs.plugins.room) apply false
 }
 
 android {
@@ -57,4 +59,10 @@ dependencies {
     implementation(libs.logging.interceptor)
     // Kotlin Coroutines
     implementation(libs.kotlinx.coroutines.android)
+
+
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+    androidTestImplementation(libs.androidx.room.testing)
+
 }

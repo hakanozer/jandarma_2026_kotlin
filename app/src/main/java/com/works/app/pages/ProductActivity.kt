@@ -1,6 +1,10 @@
 package com.works.app.pages
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
@@ -11,8 +15,10 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.works.app.R
+import com.works.app.SplahActivity
 import com.works.app.adapters.ProductAdapter
 import com.works.app.models.ProductReponse
+import com.works.app.services.Authentication
 import com.works.app.services.ProductService
 import com.works.app.utils.ImageLoader
 import com.works.app.utils.RetrofitClient
@@ -135,5 +141,35 @@ class ProductActivity : AppCompatActivity() {
 
     companion object {
         private const val PER_PAGE = 10
+    }
+
+    // Menüyü sayfada göster
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.dashboard, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    // menüdeki itemlardan hangisine tıklanıldı
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.m_notlarim -> {
+                Log.d("TAG", "m_notlarim")
+            }
+            R.id.m_profile -> {
+                Log.d("TAG", "m_profile")
+            }
+            R.id.m_logout -> {
+                RetrofitClient.initialize(this)
+                val api = RetrofitClient.apiService.create(Authentication::class.java)
+                api.logout()
+                val sharedPreferences = getSharedPreferences("app", MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                editor.remove("token")
+                editor.apply()
+                val i = Intent(this, SplahActivity::class.java)
+                startActivity(i)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

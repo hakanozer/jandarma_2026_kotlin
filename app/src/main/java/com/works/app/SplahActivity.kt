@@ -9,10 +9,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.works.app.pages.LoginActivity
 import com.works.app.pages.ProductActivity
 import com.works.app.services.Authentication
 import com.works.app.utils.RetrofitClient
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -32,6 +35,10 @@ class SplahActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // actionbar hide
+        supportActionBar?.hide()
+
         progressBar = findViewById(R.id.progressBar)
         // progressBar show
 
@@ -73,10 +80,11 @@ class SplahActivity : AppCompatActivity() {
     }
 
     fun gotoPage(intent: Intent) {
-        // 3 sn timer
-        Thread.sleep(2000)
-        progressBar.visibility = ProgressBar.INVISIBLE
-        startActivity(intent)
+        lifecycleScope.launch {
+            delay(2000)
+            progressBar.visibility = ProgressBar.INVISIBLE
+            startActivity(intent)
+        }
     }
 
 }

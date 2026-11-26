@@ -16,4 +16,7 @@ interface Authentication {
     @GET("profile/me")
     fun profileMe() : Call<Any>
 
+    @GET("auth/logout")
+    fun logout() : Call<Any>
+
 }
