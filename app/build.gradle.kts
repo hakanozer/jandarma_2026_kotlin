@@ -1,7 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.ksp) apply false
-    alias(libs.plugins.room) apply false
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.room)
+
+
 }
 
 android {
@@ -38,6 +40,10 @@ android {
     }
 }
 
+room {
+    schemaDirectory("$projectDir/schemas")
+}
+
 dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.appcompat)
@@ -62,7 +68,8 @@ dependencies {
 
 
     implementation(libs.androidx.room.runtime)
-    ksp(libs.androidx.room.compiler)
+    // ksp(libs.androidx.room.compiler)
+    add("ksp", libs.androidx.room.compiler)
     androidTestImplementation(libs.androidx.room.testing)
 
 }
