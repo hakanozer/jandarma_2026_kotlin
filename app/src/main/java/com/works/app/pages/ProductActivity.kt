@@ -157,7 +157,8 @@ class ProductActivity : AppCompatActivity() {
                 startActivity(i)
             }
             R.id.m_profile -> {
-                Log.d("TAG", "m_profile")
+                val i = Intent(this, ProfileActivity::class.java)
+                startActivity(i)
             }
             R.id.m_logout -> {
                 RetrofitClient.initialize(this)
