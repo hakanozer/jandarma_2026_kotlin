@@ -153,7 +153,8 @@ class ProductActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.m_notlarim -> {
-                Log.d("TAG", "m_notlarim")
+                val i = Intent(this, NotesActivity::class.java)
+                startActivity(i)
             }
             R.id.m_profile -> {
                 Log.d("TAG", "m_profile")

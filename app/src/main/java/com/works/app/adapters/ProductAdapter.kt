@@ -117,6 +117,7 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() 
                 txtDiscount.visibility = View.GONE
             }
 
+
             imageAdapter.submitImages(product.images)
             rvImages.scrollToPosition(0)
             buildDots(product.images.size)
