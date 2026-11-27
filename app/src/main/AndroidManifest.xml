@@ -44,6 +44,10 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAEYip_jT3sjVqt3_T9rFF6_q-qVmzZ_tE" />
+
         <activity
             android:name=".pages.NotesActivity"
             android:exported="false"

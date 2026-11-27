@@ -2,8 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.ksp)
     alias(libs.plugins.room)
-
-
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -51,6 +50,7 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.recyclerview)
     implementation(libs.material)
+    implementation(libs.play.services.maps)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
