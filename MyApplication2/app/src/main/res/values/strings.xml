@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Mobil Yönetim Panel</string>
+    <string name="welcome_title">Hoş Geldiniz</string>
+    <string name="welcome_subtitle">Devam etmek için hesabınıza giriş yapın.</string>
+
+    <!-- Auth -->
+    <string name="email_label">E-posta Adresi</string>
+    <string name="email_hint">ornek@email.com</string>
+    <string name="password_label">Şifre</string>
+    <string name="password_hint">••••••••</string>
+    <string name="remember_me">Beni Hatırla</string>
+    <string name="login_button">Giriş Yap</string>
+    <string name="login_loading">Giriş yapılıyor...</string>
+    <string name="error_email_empty">Lütfen e-posta adresinizi giriniz.</string>
+    <string name="error_email_invalid">Lütfen geçerli bir e-posta adresi giriniz.</string>
+    <string name="error_password_empty">Lütfen şifrenizi giriniz.</string>
+    <string name="error_password_too_short">Şifre en az 6 karakter olmalıdır.</string>
+    <string name="error_login_failed">Giriş işlemi başarısız. Lütfen bilgilerinizi kontrol edin.</string>
+    <string name="error_network">İnternet bağlantınızı kontrol ediniz.</string>
+    <string name="error_unauthorized">Oturumunuz sona erdi. Lütfen tekrar giriş yapınız.</string>
+    <string name="error_generic">Bir hata oluştu. Lütfen tekrar deneyiniz.</string>
+    <string name="error_server">Sunucuya şu anda ulaşılamıyor.</string>
+
+    <!-- Navigation Drawer -->
+    <string name="menu_products">Ürünler</string>
+    <string name="menu_notes">Notlar</string>
+    <string name="menu_profile">Profil</string>
+    <string name="drawer_open">Aç</string>
+    <string name="drawer_close">Kapat</string>
+
+    <!-- Products -->
+    <string name="products_title">Ürün Kataloğu</string>
+    <string name="product_detail_title">Ürün Detayı</string>
+    <string name="search_products_hint">Ürün adı veya marka ara...</string>
+    <string name="product_brand">Marka</string>
+    <string name="product_category">Kategori</string>
+    <string name="product_price">Fiyat</string>
+    <string name="product_discount">İndirim</string>
+    <string name="product_rating">Değerlendirme</string>
+    <string name="product_stock">Stok Durumu</string>
+    <string name="product_sku">SKU Kodu</string>
+    <string name="product_min_order">Minimum Sipariş Miktarı</string>
+    <string name="product_description">Ürün Açıklaması</string>
+    <string name="product_in_stock">Stokta Var (%1$d adet)</string>
+    <string name="product_out_of_stock">Stokta Yok</string>
+    <string name="no_products_found">Henüz ürün bulunamadı</string>
+    <string name="retry">Tekrar Dene</string>
+    <string name="loading">Yükleniyor...</string>
+    <string name="currency_symbol">₺</string>
+
+    <!-- Notes -->
+    <string name="notes_title">Notlarım</string>
+    <string name="add_note">Yeni Not Ekle</string>
+    <string name="edit_note">Notu Düzenle</string>
+    <string name="note_title_label">Not Başlığı</string>
+    <string name="note_title_hint">Başlık yazın...</string>
+    <string name="note_content_label">Not İçeriği</string>
+    <string name="note_content_hint">Detayları yazın...</string>
+    <string name="note_favorite">Favorilere Ekle</string>
+    <string name="search_notes_hint">Notlarda ara...</string>
+    <string name="filter_all">Tüm Notlar</string>
+    <string name="filter_favorites">Favoriler</string>
+    <string name="no_notes_found">Henüz notunuz bulunmuyor.</string>
+    <string name="no_notes_subtitle">Aşağıdaki + butonuna basarak ilk notunuzu oluşturabilirsiniz.</string>
+    <string name="error_note_title_empty">Lütfen not başlığını giriniz.</string>
+    <string name="error_note_content_empty">Lütfen not içeriğini giriniz.</string>
+    <string name="note_saved_success">Not başarıyla kaydedildi.</string>
+    <string name="note_deleted_success">Not silindi.</string>
+    <string name="delete_note_title">Notu Sil</string>
+    <string name="delete_note_confirm">Bu notu silmek istediğinize emin misiniz? Bu işlem geri alınamaz.</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Kullanıcı Profili</string>
+    <string name="profile_info_section">Kullanıcı Bilgileri</string>
+    <string name="profile_settings_section">Uygulama Ayarları</string>
+    <string name="profile_full_name">Ad Soyad</string>
+    <string name="profile_email">E-posta</string>
+    <string name="profile_user_id">Kullanıcı ID</string>
+    <string name="profile_role">Yetki / Rol</string>
+    <string name="profile_created_at">Hesap Oluşturma Tarihi</string>
+    <string name="dark_mode">Karanlık Tema</string>
+    <string name="logout_button">Çıkış Yap</string>
+    <string name="logout_confirm_title">Oturumu Kapat</string>
+    <string name="logout_confirm_message">Hesabınızdan çıkış yapmak istediğinizden emin misiniz?</string>
+
+    <!-- Common Actions -->
+    <string name="save">Kaydet</string>
+    <string name="cancel">İptal</string>
+    <string name="delete">Sil</string>
+    <string name="edit">Düzenle</string>
+    <string name="close">Kapat</string>
+    <string name="ok">Tamam</string>
+</resources>

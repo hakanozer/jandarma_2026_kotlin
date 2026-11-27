@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_products">
+
+    <fragment
+        android:id="@+id/nav_products"
+        android:name="com.works.myapplication.presentation.product.ProductFragment"
+        android:label="@string/menu_products"
+        tools:layout="@layout/fragment_product">
+        <action
+            android:id="@+id/action_productFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.works.myapplication.presentation.product.ProductDetailFragment"
+        android:label="@string/product_detail_title"
+        tools:layout="@layout/fragment_product_detail">
+        <argument
+            android:name="productId"
+            app:argType="integer" />
+        <argument
+            android:name="productJson"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_notes"
+        android:name="com.works.myapplication.presentation.note.NoteFragment"
+        android:label="@string/menu_notes"
+        tools:layout="@layout/fragment_note" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.works.myapplication.presentation.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

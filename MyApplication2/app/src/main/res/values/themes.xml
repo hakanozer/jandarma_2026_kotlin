@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_onPrimaryContainer</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/md_theme_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_onSecondaryContainer</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/md_theme_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Background & Surface -->
+        <item name="android:windowBackground">@color/md_theme_background</item>
+        <item name="colorSurface">@color/md_theme_surface</item>
+        <item name="colorOnSurface">@color/md_theme_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_onSurfaceVariant</item>
+
+        <!-- Error & Text -->
+        <item name="colorError">@color/md_theme_error</item>
+        <item name="colorOnError">@color/md_theme_onError</item>
+
+        <!-- Corner treatment for cards -->
+        <item name="shapeAppearanceCornerMedium">@style/ShapeAppearance.App.CornerMedium</item>
+    </style>
+
+    <style name="ShapeAppearance.App.CornerMedium" parent="ShapeAppearance.Material3.Corner.Medium">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.CornerLarge" parent="ShapeAppearance.Material3.Corner.Large">
+        <item name="cornerSize">24dp</item>
+    </style>
+</resources>
